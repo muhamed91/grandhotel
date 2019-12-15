@@ -1,0 +1,163 @@
+.navigation {
+    margin-left: 8rem;
+    position: fixed;
+    width: 40rem;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 41, 60, 0.6), #00293c), url(../img/nav-bg.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include flexElement;
+
+
+    &__header {
+
+        &-heading {
+
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: .2rem;
+            color: #deaa86;
+            text-align: center;
+
+        }
+    }
+
+    &__search {
+
+        position: relative;
+
+        &-input {
+            width: 30rem;
+            padding: 1rem 2rem;
+            background-color: rgba(0,0,0, .3);
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.6rem;
+            color: #deaa86;
+            letter-spacing: .1rem;
+            outline: none;
+            border: .1rem solid #555;
+            border-radius: 10rem;
+            -webkit-border-radius: 10rem ;
+            -moz-border-radius: 10rem;
+            -ms-border-radius: 10rem;
+            -o-border-radius: 10rem;
+            transition: background-color .2s;
+            -webkit-transition: background-color .2s;
+            -moz-transition: background-color .2s;
+            -ms-transition: background-color .2s;
+            -o-transition: background-color .2s;
+            
+            &:focus             
+            {
+
+                background-color: rgba(0,0,0, .1);
+            }
+        }
+
+        &-btn {
+            border: none;
+            background-color: transparent;
+            color: #deaa86;
+            font-size: 1.7rem;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            cursor: pointer;
+
+            :focus {
+                outline: none;
+            }
+        }
+
+    }
+
+    &__list {
+        list-style: none;
+        @include flexElement;
+        height: 28rem;
+
+        &-item {
+            position: relative;
+        }
+
+
+        &-item-link {
+            color: white;
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color .5s;
+            -webkit-transition: color .5s;
+            -moz-transition: color .5s;
+            -ms-transition: color .5s;
+            -o-transition: color .5s;
+            
+            &:before {
+                content: "";
+                width: 0rem;
+                height: .2rem;
+                background-color: #deaa86;
+                position: absolute;
+                top: 1rem;
+                left: -4rem;
+                transition: width .5s cubic-bezier(1,0,0,1);
+                -webkit-transition: width .5s cubic-bezier(1,0,0,1);
+                -moz-transition: width .5s cubic-bezier(1,0,0,1);
+                -ms-transition: width .5s cubic-bezier(1,0,0,1);
+                -o-transition: width .5s cubic-bezier(1,0,0,1);
+            }
+
+
+            
+            &:after {
+                content: "";
+                width: 0rem;
+                height: .2rem;
+                background-color: #deaa86;
+                position: absolute;
+                top: 1rem;
+                right: -4rem;
+                transition: width .5s cubic-bezier(1,0,0,1);
+                -webkit-transition: width .5s cubic-bezier(1,0,0,1);
+                -moz-transition: width .5s cubic-bezier(1,0,0,1);
+                -ms-transition: width .5s cubic-bezier(1,0,0,1);
+                -o-transition: width .5s cubic-bezier(1,0,0,1);
+                
+
+               
+            }
+
+            &:hover {
+                color: #deaa86;
+
+                &::before {
+                    width: 3rem;
+                }
+
+
+                &::after {
+                    width: 3rem;
+                }
+            }
+
+
+        }
+
+
+    }
+
+    &__copyright {
+
+        &-text {
+            color: white;
+            font-size: 1.2rem;
+        }
+    }
+    
+    
+    
+}

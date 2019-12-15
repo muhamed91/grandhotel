@@ -1,4 +1,8 @@
-@import "scss/partials/sidebar";
+
+@import "./partials/sidebar";
+@import "./partials/navbar";
+@import "./partials/mixin";
+
 
 
 /* common styles */
@@ -11,8 +15,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    color: red;
 }
 /* end of common styles */
+
+
+
+
 
 
