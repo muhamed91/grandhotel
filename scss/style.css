@@ -1,0 +1,110 @@
+/* common styles */
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* end of common styles */
+/* navbar */
+.navbar__sidebar {
+  width: 8rem;
+  height: 100%;
+  background-color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+}
+
+.navbar__sidebar--icon {
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.navbar__sidebar--icon:hover .line {
+  width: 2.5rem !important;
+}
+
+.navbar__sidebar--line-1 {
+  width: 1.6rem !important;
+  transition: width .2s;
+  -webkit-transition: width .2s;
+  -moz-transition: width .2s;
+  -ms-transition: width .2s;
+  -o-transition: width .2s;
+}
+
+.navbar__sidebar--line-3 {
+  width: 1.6rem !important;
+  transition: width .2s;
+  -webkit-transition: width .2s;
+  -moz-transition: width .2s;
+  -ms-transition: width .2s;
+  -o-transition: width .2s;
+}
+
+.navbar__sidebar .line {
+  height: .2rem;
+  width: 2.5rem;
+  background-color: #222;
+  margin-bottom: .6rem;
+}
+
+.navbar__sidebar--social-media-list {
+  list-style-type: none;
+  padding: 0;
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__sidebar--social-media-list-icons a {
+  font-size: 2rem;
+  color: #777;
+  transition: color .2s;
+  -webkit-transition: color .2s;
+  -moz-transition: color .2s;
+  -ms-transition: color .2s;
+  -o-transition: color .2s;
+}
+
+.navbar__sidebar--social-media-list-icons a:hover {
+  color: #deaa86;
+}
+
+.navbar__sidebar-year {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: grey;
+}
+
+/* navbar */
+/*# sourceMappingURL=style.css.map */
