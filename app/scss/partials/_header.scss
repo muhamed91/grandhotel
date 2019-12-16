@@ -1,0 +1,93 @@
+.header {
+    margin-left: 8rem;
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url(../img/header-2.jpg);
+    background-size: cover;
+
+    &__brand {
+        display: flex;
+        cursor: pointer;
+    }
+
+    &__heading {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 2.7rem;
+        font-weight: 400;
+        color: #deaa86;
+        letter-spacing: .2rem;
+    }
+
+
+    &__banner {
+        color: #ddd;
+        height: 65rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        &-heading {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 7rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            animation: anim 2s;
+            -webkit-animation: anim 2s;
+            }
+
+        &-paragraph {
+            font-size: 3.5rem;
+            font-weight: 300;
+            animation: anim 1.5s .5s backwards;
+            -webkit-animation: anim 1.5s .5s backwards;
+}
+
+        &-button {
+            width: 21rem;
+            padding: 1.2rem 2rem;
+            font-size: 2rem;
+            color: #333;
+            border: none;
+            border-radius: 10rem;
+            -webkit-border-radius: 10rem;
+            -moz-border-radius: 10rem;
+            -ms-border-radius: 10rem;
+            -o-border-radius: 10rem;
+            cursor: pointer;
+            background:linear-gradient(to right, gold,goldenrod);
+            animation: anim 1s 1s backwards;
+            -webkit-animation: anim 1s 1s backwards;
+            
+            &:hover{
+                background:linear-gradient(to left, gold,goldenrod); 
+ 
+            }
+
+            &:active {
+                transform: translateY(.2rem);
+                -webkit-transform: translateY(.2rem);
+                -moz-transform: translateY(.2rem);
+                -ms-transform: translateY(.2rem);
+                -o-transform: translateY(.2rem);
+            }
+        }
+
+    }
+
+
+
+
+
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+}

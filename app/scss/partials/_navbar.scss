@@ -1,3 +1,5 @@
+@import "./partials/mixin";
+
 .navigation {
     margin-left: 8rem;
     position: fixed;
@@ -8,6 +10,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     @include flexElement;
+    // Just for Development reasons
+    transform: translate3d(-510px, 0, -9px);
 
 
     &__header {

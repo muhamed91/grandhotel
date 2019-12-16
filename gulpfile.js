@@ -1,39 +1,37 @@
-const gulp  = require('gulp');
+const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 
-// compile scss into css
 
 function runSass() {
-
-    // 1. Where is my scss file
-    return gulp.src('./app/scss/**/*.scss')
-
-    // 2. Pass that file through sass compiler
-    .pipe(sass().on('error', sass.logError))
-
-    // 3. Wheere do i save the Compiled CSS?
-    .pipe(gulp.dest('./app/css'))
-
-    // stream change to all browser
-    .pipe(browserSync.stream());
-
+  return gulp.src('./app/scss/**/*.scss')
+             .pipe(sass())
+             .pipe(gulp.dest('./app/css'))
+             .pipe(browserSync.stream());
 }
 
 
-function watch() {
-    browserSync.init({
-        server: {
-            baseDir: 'app'
-        }
-    });
+function reloadBrowser(done) {
+  browserSync.reload();
+  return done();
+}
 
-    gulp.watch('./app/scss/**/*scss', runSass);
-    gulp.watch('./app/*.html').on('change', browserSync.reload)
-    gulp.watch('/app/js/**/*.js').on('change', browserSync.reload);
+function startBrowserSync() {
+  browserSync.init({
+    server: {
+      baseDir: './app'
+    }
+  })
 }
 
 
-exports.runSass = runSass;
-exports.watch = watch;
+gulp.task('sass', runSass);
 
+
+gulp.task('watch', gulp.series('sass', function(done) {
+  startBrowserSync();
+  gulp.watch('./app/scss/**/*.scss', runSass);
+  gulp.watch('./app/*html', reloadBrowser);
+//   gulp.watch('src/js/**/*.js', reloadBrowser);
+  done();
+}));
