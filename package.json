@@ -1,7 +1,7 @@
 {
   "name": "grandhotel",
   "version": "1.0.0",
-  "description": "A GrandHotel Website Dmeo",
+  "description": "A GrandHotel Website Demo",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,7 +1,17 @@
 @import "./partials/mixin";
 
+
+.show-sidebar {
+    transform:translate3d(0px, 0, -9px) !important;
+    -webkit-transform:translate3d(0px, 0, -9px) !important;
+    -moz-transform:translate3d(0px, 0, -9px) !important;
+    -ms-transform:translate3d(0px, 0, -9px) !important;
+    -o-transform:translate3d(0px, 0, -9px) !important;
+}
+
 .navigation {
     margin-left: 8rem;
+    transition:all .3s;
     position: fixed;
     width: 40rem;
     height: 100%;
@@ -9,12 +19,14 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    @include flexElement;
-    // Just for Development reasons
-    transform: translate3d(-510px, 0, -9px);
+        @include flexElement;
+        //JustforDevelopmentreasonstransform: translate3d(-510px, 
+        transform:translate3d(-510px, 0, -9px);
+        -webkit-transform:translate3d(-510px, 0, -9px);
+        -moz-transform:translate3d(-510px, 0, -9px);
+        -ms-transform:translate3d(-510px, 0, -9px);
+        -o-transform:translate3d(-510px, 0, -9px);
 
-
-    &__header {
 
         &-heading {
 
@@ -26,7 +38,7 @@
             text-align: center;
 
         }
-    }
+
 
     &__search {
 
@@ -165,3 +177,5 @@
     
     
 }
+
+

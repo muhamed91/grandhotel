@@ -1,0 +1,85 @@
+.customers {
+    margin-left: 8rem;
+    background-color: #15141b;
+    padding-bottom: 75px;
+
+    &__header {
+
+        padding: 5rem;
+        text-align: center;
+        color: #b85d1c;
+
+        &-heading {
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: .2rem;
+
+
+        }
+
+        &-small-underline {
+            width: 9rem;
+            height: .1rem;
+            margin: 0 auto 1rem auto;
+            background-color: #b85d1c;
+        }
+
+
+        &-big-underline {
+            width: 20rem;
+            height: .1rem;
+            background-color: #b85d1c;
+            margin: auto;
+        }
+
+    }
+    &__paragraph {
+        font-size: 1.8rem;
+        color: #ddd;
+        width: 50%;
+        margin: 2rem auto 8rem auto;
+        text-align: center;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    &__card-wrapper {
+        background-color: #eee;
+        width: 60rem;
+        display: flex;
+        padding-top: 10px;
+
+        &--img-wrapper {
+            margin: 0 auto;
+        }
+
+        &--img-wrapper-src {
+            width: 20rem;
+            margin-left: -1.2rem;
+        }
+    }
+
+    &__info {
+        padding:  0 2rem;
+    }
+
+    &__fullname {
+        font-size: 2rem;
+        font-weight: 300;
+        margin-bottom: 0;
+    }
+
+    &__paragraph-1 {
+        font-size: 1.2rem;
+        font-style: italic;
+        color: #b85d1c;
+    }
+
+    &__paragraph-2 {
+        font-size: 1.3rem;
+        font-style: italic;
+    }
+}
